@@ -1,0 +1,13 @@
+---
+name: apiexample
+
+templates:
+  ctl.erb: bin/ctl
+
+packages:
+  - apiexample
+
+properties:
+  apiexample.port:
+    description: "The port of the apiexample, default 3000."
+    default: 3000

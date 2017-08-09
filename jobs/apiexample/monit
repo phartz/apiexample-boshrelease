@@ -1,0 +1,5 @@
+check process apiexample
+  with pidfile /var/vcap/sys/run/apiexample/pid
+  start program "/var/vcap/jobs/apiexample/bin/ctl start"
+  stop program "/var/vcap/jobs/apiexample/bin/ctl stop"
+  group vcap

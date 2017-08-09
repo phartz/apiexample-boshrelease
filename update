@@ -1,0 +1,15 @@
+#!/bin/bash -x
+APIEXAMPLE_VERSION="0.1"
+APIEXAMPLE_TARBALL_DIR=src/apiexample
+APIEXAMPLE_TARBALL_FILE=$APIEXAMPLE_TARBALL_DIR/apiexample.v$APIEXAMPLE_VERSION.tgz
+
+if [ ! -d $APIEXAMPLE_TARBALL_DIR ]; then
+  mkdir -p $APIEXAMPLE_TARBALL_DIR
+fi
+
+if [ ! -f $APIEXAMPLE_TARBALL_FILE ]; then
+  echo "Downloading apiexample version $APIEXAMPLE_VERSION tarball"
+  wget https://github.com/phartz/apiexample/releases/download/v$APIEXAMPLE_VERSION/apiexample.v$APIEXAMPLE_VERSION.tgz -P $APIEXAMPLE_TARBALL_DIR
+else
+  echo "Detected apiexample tarball. Not downloading."
+fi

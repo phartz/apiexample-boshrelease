@@ -1,0 +1,4 @@
+set -e
+
+tar -zxf apiexample/apiexample.v0.1.tgz
+chmod +x apiexample
